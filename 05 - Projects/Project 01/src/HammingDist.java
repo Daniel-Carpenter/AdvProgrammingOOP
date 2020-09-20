@@ -29,38 +29,60 @@ public class HammingDist
 		
 	// Calculations -----------------------------------------------------------------------
 		
-		public String calcInputHammingDist()
+		public int calcHammDistOfSTID(String STID)
 		{
-			int STID_1_Count = 0;	
-			int STID_2_Count = 0;	
+			int STID_Count = 0;	
 			
-			for (int STID_ELEMENT = 0; STID_ELEMENT < this.STID_List.size(); ++STID_ELEMENT)
+			for (int LETTER = 0; LETTER < 4; ++LETTER)
 			{
-				for (int LETTER = 0; LETTER < 4; ++LETTER)
+				if (this.NRMN.charAt(LETTER) != STID.charAt(LETTER))
 				{
-					if (this.NRMN.charAt(LETTER) != this.STID_List.get(STID_ELEMENT).charAt(LETTER))
-					{
-						if (this.STID_List.get(STID_ELEMENT) == this.getSTID_1())
-						{							
-							STID_1_Count += 1;
-						}
-						else
-						{							
-							STID_2_Count += 1;
-						}
-					}
+					++STID_Count;
 				}
 			}
 			
-			String output = "The Hamming distance between Norman and " + 
-							this.getSTID_1() + " is " + STID_1_Count + "; " +
-							"between Norman and " + 
-							this.getSTID_2() + " is " + STID_2_Count + ".";
-			
-			return output;
+			return STID_Count;
 		}
 		
-		public ArrayList<Integer> calcAllHammingDist() throws IOException
+		public ArrayList<String> readSTIDs(String filename) throws IOException
+		{
+			// Read in file ------------------------------------------------------------------
+					
+				// Create Reader
+					BufferedReader reader = new BufferedReader(new FileReader(filename));
+		
+				// Instantiate
+					int rows = 1;
+					String line = reader.readLine();	
+		
+				// Read in file via loop
+					while (line != null)
+					{
+						// Don't read in data describing what the data is
+							if (rows < 6) // row (line) 6 in .txt file
+							{
+								line = reader.readLine();					
+							}
+							
+						// Read in Actual Data
+							else 
+							{
+								// Parse first column of STID's
+									this.STID_List_Full.add(line.substring(0, 10).trim());
+									
+								// Read in next Line
+									line = reader.readLine();			
+							}
+						// Increment to next Line
+							++rows;
+					}
+					
+					reader.close();
+			
+			return this.STID_List_Full;
+		}
+		
+		public ArrayList<Integer> calcHammDistFromFile() throws IOException
 		{
 			// Read in Mesonet .txt file
 				ArrayList<String> meso = this.readSTIDs("Mesonet.txt");
@@ -88,44 +110,25 @@ public class HammingDist
 				return this.HAMM_COUNT;
 		}
 		
-		public ArrayList<String> readSTIDs(String filename) throws IOException
+		public int calcSameHammDists(String STID) throws IOException
 		{
-			// Read in file ------------------------------------------------------------------
-					
-				// Create Reader
-					BufferedReader reader = new BufferedReader(new FileReader(filename));
-		
-				// Instantiate
-					int rows = 1;
-					String line = "";
-		
-				// Read in file via loop
-					while (line != null)
-					{
-						// Don't read in data describing what the data is
-							if (rows <= 6) // row (line) 6 in .txt file
-							{
-								line = reader.readLine();					
-							}
-							
-						// Read in Actual Data
-							else 
-							{
-								// Parse first column of STID's
-									this.STID_List_Full.add(line.substring(0, 10).trim());
-									
-								// Read in next Line
-									line = reader.readLine();			
-							}
-						// Increment to next Line
-							++rows;
-					}
-					
-					reader.close();
+			int hammInput = this.calcHammDistOfSTID(STID);
+			ArrayList<Integer> hammList = this.calcHammDistFromFile();
 			
-			return this.STID_List_Full; // TODO TODO
+			int count = 0;
+			
+			for (int ROWS = 0; ROWS < hammList.size() - 1; ++ROWS)
+			{
+				if (hammInput == hammList.get(ROWS))
+				{
+					++count;
+				}
+			}
+			
+			return count - 1; // -1 because do not double count first
 		}
 		
+	
 	// Getters ----------------------------------------------------------------------------
 		
 		public String getSTID_1() 

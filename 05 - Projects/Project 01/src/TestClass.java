@@ -19,15 +19,51 @@ public class TestClass
 		
 //		System.out.println("After-Sleep Second: " + dateTimeOne.getValueOfSecond());
 		
-		HammingDist ham1 = new HammingDist("NEWK", "WEBR");
-		System.out.println(ham1.calcInputHammingDist());
+//		String output = "The Hamming distance between Norman and " + 
+//		this.getSTID_1() + " is " + STID_1_Count + "; " +
+//		"between Norman and " + 
+//		this.getSTID_2() + " is " + STID_2_Count + ".";
+//		
+		String STID_NAME = "NRMN";
+		
+//		
+		HammingDist ham1 = new HammingDist(STID_NAME, "WEBR");
+		int hamCount = ham1.calcSameHammDists(STID_NAME);
+		System.out.println("Count of same elements: " + 
+		hamCount);
+		
+//		
+//		System.out.println("---------------------------------------");
+//		
+		
+//		ArrayList<String> meso = ham1.readSTIDs("Mesonet.txt");
+//		
+//		for (int i = 0; i < meso.size(); ++i)
+//		{			
+//			
+//			System.out.println(meso.get(i));
+//		}
+//
+//		System.out.println("File size: " + meso.size());
 		
 		
-		ArrayList<String> meso = ham1.readSTIDs("Mesonet.txt");
-		ArrayList<Integer> hamCount = ham1.calcAllHammingDist();
-		int ELEMENT = 75;
 		
-		System.out.println(meso.get(ELEMENT));
-		System.out.println(hamCount.get(ELEMENT));
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+//		String output = "The Hamming distance between Norman and " + 
+//		this.getSTID_1() + " is " + STID_1_Count + "; " +
+//		"between Norman and " + 
+//		this.getSTID_2() + " is " + STID_2_Count + ".";
+//
+		
 	}
 }
