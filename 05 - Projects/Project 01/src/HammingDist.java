@@ -1,5 +1,7 @@
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class HammingDist 
@@ -10,6 +12,7 @@ public class HammingDist
 		private 		String STID_1;
 		private 		String STID_2;
 		private ArrayList<String> STID_List = new ArrayList<String>();
+		private ArrayList<String> STID_List_Full = new ArrayList<String>();
 	
 	
 	// Constructors -----------------------------------------------------------------------
@@ -56,6 +59,48 @@ public class HammingDist
 			return output;
 		}
 		
+		public String calcAllHammingDist()
+		{
+			return ""; // TODO TODO
+		}
+		
+		public ArrayList<String> readSTIDs(String filename) throws IOException
+		{
+			// Read in file ------------------------------------------------------------------
+					
+				// Create Reader
+					BufferedReader reader = new BufferedReader(new FileReader(filename));
+		
+				// Instantiate
+					int rows = 1;
+					String line = "";
+		
+				// Read in file via loop
+					while (line != null)
+					{
+						// Don't read in data describing what the data is
+							if (rows <= 6) // row (line) 6 in .txt file
+							{
+								line = reader.readLine();					
+							}
+							
+						// Read in Actual Data
+							else 
+							{
+								// Parse first column of STID's
+									this.STID_List_Full.add(line.substring(0, 10).trim());
+									
+								// Read in next Line
+									line = reader.readLine();			
+							}
+						// Increment to next Line
+							++rows;
+					}
+					
+					reader.close();
+			
+			return this.STID_List_Full; // TODO TODO
+		}
 		
 	// Getters ----------------------------------------------------------------------------
 		
