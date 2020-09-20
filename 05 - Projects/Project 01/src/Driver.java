@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class Driver 
 {
-	public static void main(String[] args) throws IOException 
+	public static void main(String[] args) throws IOException, InterruptedException 
 	{
 		int stopIfSecond = 30;
 		DateTimeOne dateTimeOne = new DateTimeOne();
@@ -14,7 +14,7 @@ public class Driver
 		/**
 		 * You have to retrieve the value of "Second" of the current time.
 		 * If 'Second' is greater than 30, you have to sleep your program for 3 seconds. 
-		 * Current value of “Second” is stored in vlaueOfSecondNow. 
+		 * Current value of â€œSecondâ€� is stored in vlaueOfSecondNow. 
 		 * If second is 58, the resulted string will be, "The value of Second now: 58"
 		 */
 		int vlaueOfSecondNow = dateTimeOne.getValueOfSecond();

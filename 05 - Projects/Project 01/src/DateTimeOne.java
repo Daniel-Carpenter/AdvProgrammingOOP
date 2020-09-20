@@ -39,6 +39,13 @@ public class DateTimeOne
 
 	public void sleepForThreeSec() throws InterruptedException 
 	{
-		TimeUnit.SECONDS.sleep(3);
+		try 
+		{
+			TimeUnit.SECONDS.sleep(3);
+		} 
+		catch(InterruptedException ex) 
+		{
+			ex.printStackTrace();
+		}
 	}
 }
