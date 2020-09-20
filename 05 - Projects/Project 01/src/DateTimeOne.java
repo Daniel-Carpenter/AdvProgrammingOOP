@@ -2,7 +2,6 @@ import java.sql.Date;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.concurrent.TimeUnit;
-
 import javax.print.DocFlavor.STRING;
 
 public class DateTimeOne
@@ -11,16 +10,16 @@ public class DateTimeOne
 	{
 		// Date/time object for date/time ---------------------------------------------------------------
 			// Set Time Format
-				DateTimeFormatter formattedDateTime = DateTimeFormatter.ofPattern("MM/dd/yyyy hh:mm a");
+				DateTimeFormatter secondFormat = DateTimeFormatter.ofPattern("s");
 			
 			// Get Local Time
 				LocalDateTime showDateTime = LocalDateTime.now();
 				
 			// Create String Var with Formatted DateTime
-				String formattedDateTimeFinal = showDateTime.format(formattedDateTime);
-				
+				int currentSecond = Integer.parseInt(showDateTime.format(secondFormat));
+
 			// Print Current Date/Time
-			    System.out.println("Current Date/Time: " + formattedDateTimeFinal);	    
+			    System.out.println("The value of Second now: " + currentSecond);	    
 	}
 	
 	public int getValueOfSecond() 

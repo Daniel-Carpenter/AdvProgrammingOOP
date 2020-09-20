@@ -6,14 +6,15 @@ public class TestClass
 {
 	public static void main(String[] args) throws InterruptedException
 	{
-		DateTimeOne dateTimeOne = new DateTimeOne();
-		dateTimeOne.dateTimeNow();
-		System.out.println("Current Second: " + dateTimeOne.getValueOfSecond());
+//		DateTimeOne dateTimeOne = new DateTimeOne();
+//		dateTimeOne.dateTimeNow();
+//		System.out.println(dateTimeOne.getValueOfSecond());
+//		
+//		TimeUnit.SECONDS.sleep(3);
 		
-		TimeUnit.SECONDS.sleep(3);
-		System.out.println("After-Sleep Second: " + dateTimeOne.getValueOfSecond());
+//		System.out.println("After-Sleep Second: " + dateTimeOne.getValueOfSecond());
 		
-		
-		
+		HammingDist ham1 = new HammingDist("NEWK", "WEBR");
+		System.out.println(ham1.calcInputHammingDist());
 	}
 }
