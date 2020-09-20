@@ -1,5 +1,4 @@
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,9 +10,6 @@ public class HammingDist
 		final private 	String NRMN = "NRMN";
 		private 		String STID_1;
 		private 		String STID_2;
-		private ArrayList<String> STID_List = new ArrayList<String>();
-		private ArrayList<String> STID_List_Full = new ArrayList<String>();
-		private ArrayList<Integer> HAMM_COUNT = new ArrayList<Integer>();
 	
 	
 	// Constructors -----------------------------------------------------------------------
@@ -22,10 +18,7 @@ public class HammingDist
 		{
 			this.STID_1 = STID_1;
 			this.STID_2 = STID_2;
-			this.STID_List.add(STID_1);
-			this.STID_List.add(STID_2);	
 		}
-		
 		
 	// Calculations -----------------------------------------------------------------------
 		
@@ -46,6 +39,10 @@ public class HammingDist
 		
 		public ArrayList<String> readSTIDs(String filename) throws IOException
 		{
+			// Output Array
+				 ArrayList<String> STID_List_Full = new ArrayList<String>();
+
+			
 			// Read in file ------------------------------------------------------------------
 					
 				// Create Reader
@@ -68,7 +65,7 @@ public class HammingDist
 							else 
 							{
 								// Parse first column of STID's
-									this.STID_List_Full.add(line.substring(0, 10).trim());
+									STID_List_Full.add(line.substring(0, 10).trim());
 									
 								// Read in next Line
 									line = reader.readLine();			
@@ -79,11 +76,14 @@ public class HammingDist
 					
 					reader.close();
 			
-			return this.STID_List_Full;
+			return STID_List_Full;
 		}
 		
 		public ArrayList<Integer> calcHammDistFromFile() throws IOException
 		{
+			// Create Output Array
+				ArrayList<Integer> HAMM_COUNT = new ArrayList<Integer>();
+			
 			// Read in Mesonet .txt file
 				ArrayList<String> meso = this.readSTIDs("Mesonet.txt");
 			
@@ -103,11 +103,11 @@ public class HammingDist
 						}
 					
 					// Add the Hamming Count to the ArrayList
-						this.HAMM_COUNT.add(count);
+						HAMM_COUNT.add(count);
 				}
 			
 			// Return ArrayList
-				return this.HAMM_COUNT;
+				return HAMM_COUNT;
 		}
 		
 		public int calcSameHammDists(String STID) throws IOException
@@ -128,6 +128,36 @@ public class HammingDist
 			return count - 1; // -1 because do not double count first
 		}
 		
+		public String toString()
+		{
+			String output = "The Hamming distance between Norman and " + 
+							this.getSTID_1() + " is " + this.calcHammDistOfSTID(this.getSTID_1()) + "; " 
+							+ "between Norman and " + this.getSTID_2() 
+							+ " is " + this.calcHammDistOfSTID(this.getSTID_2())+ ".";
+					
+			
+			try 
+			{
+				output = output 
+						
+						// STID_1
+							+ "\n" + "For " + this.getSTID_1() + ": Number of stations with Hamming Distance " 
+							+ this.calcHammDistOfSTID(this.getSTID_1()) + ": " 
+							+ this.calcSameHammDists(this.getSTID_1()) + "."
+						
+						// STID_2
+							+ "\n" + "For " + this.getSTID_2() + ": Number of stations with Hamming Distance " 
+							+ this.calcHammDistOfSTID(this.getSTID_2()) + ": " 
+							+ this.calcSameHammDists(this.getSTID_2()) + ".";
+			} 
+			catch (IOException e) 
+			{
+				e.printStackTrace();
+			}
+			
+			
+			return output;
+		}
 	
 	// Getters ----------------------------------------------------------------------------
 		
