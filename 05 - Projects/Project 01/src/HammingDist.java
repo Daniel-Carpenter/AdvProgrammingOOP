@@ -13,6 +13,7 @@ public class HammingDist
 		private 		String STID_2;
 		private ArrayList<String> STID_List = new ArrayList<String>();
 		private ArrayList<String> STID_List_Full = new ArrayList<String>();
+		private ArrayList<Integer> HAMM_COUNT = new ArrayList<Integer>();
 	
 	
 	// Constructors -----------------------------------------------------------------------
@@ -59,9 +60,32 @@ public class HammingDist
 			return output;
 		}
 		
-		public String calcAllHammingDist()
+		public ArrayList<Integer> calcAllHammingDist() throws IOException
 		{
-			return ""; // TODO TODO
+			// Read in Mesonet .txt file
+				ArrayList<String> meso = this.readSTIDs("Mesonet.txt");
+			
+			// Loop through STID list
+				for (int STID_ELEMENT = 0; STID_ELEMENT < meso.size() - 1; ++STID_ELEMENT)
+				{
+					int count = 0;
+					
+					// Loop through Letters for NRMN vs. STID String
+						for (int LETTER = 0; LETTER < 4; ++LETTER)
+						{
+							// Calculate Hamming Distance (if letters do not ==, then ++)
+								if (this.NRMN.charAt(LETTER) != meso.get(STID_ELEMENT).charAt(LETTER))
+								{
+									++count;
+								}	
+						}
+					
+					// Add the Hamming Count to the ArrayList
+						this.HAMM_COUNT.add(count);
+				}
+			
+			// Return ArrayList
+				return this.HAMM_COUNT;
 		}
 		
 		public ArrayList<String> readSTIDs(String filename) throws IOException

@@ -24,7 +24,10 @@ public class TestClass
 		
 		
 		ArrayList<String> meso = ham1.readSTIDs("Mesonet.txt");
-		System.out.println(meso.get(0));
-		System.out.println(meso.get(meso.size() - 1));
+		ArrayList<Integer> hamCount = ham1.calcAllHammingDist();
+		int ELEMENT = 75;
+		
+		System.out.println(meso.get(ELEMENT));
+		System.out.println(hamCount.get(ELEMENT));
 	}
 }
