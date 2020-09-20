@@ -1,6 +1,7 @@
 import java.sql.Date;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.concurrent.TimeUnit;
 
 import javax.print.DocFlavor.STRING;
 
@@ -37,13 +38,8 @@ public class DateTimeOne
 		return currentSecond;
 	}
 
-	public void sleepForThreeSec() 
+	public void sleepForThreeSec() throws InterruptedException 
 	{
-		
+		TimeUnit.SECONDS.sleep(3);
 	}
-
-
-
-	
-	
 }
