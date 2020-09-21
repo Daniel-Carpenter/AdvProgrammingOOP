@@ -90,20 +90,7 @@ public class HammingDist
 			// Loop through STID list
 				for (int STID_ELEMENT = 0; STID_ELEMENT < meso.size(); ++STID_ELEMENT)
 				{
-					int count = 0;
-					
-					// Loop through Letters for NRMN vs. STID String
-						for (int LETTER = 0; LETTER < 4; ++LETTER)
-						{
-							// Calculate Hamming Distance (if letters do not ==, then ++)
-								if (this.NRMN.charAt(LETTER) != meso.get(STID_ELEMENT).charAt(LETTER))
-								{
-									++count;
-								}	
-						}
-					
-					// Add the Hamming Count to the ArrayList
-						HAMM_COUNT.add(count);
+						HAMM_COUNT.add(calcHammDistOfSTID(meso.get(STID_ELEMENT)));
 				}
 			
 			// Return ArrayList
