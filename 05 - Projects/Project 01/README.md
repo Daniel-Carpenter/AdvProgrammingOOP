@@ -11,6 +11,7 @@ in the same sequence, then the Hamming Distance will be 0. Alternatively, if
 the characters do not match at in sequence, the hamming distance will equal the
 number of characters in the string, i.e. 4. See example below for more:
 
+
 | char 1 | char 2 | char 3 | char 4 |  Hamming Distance |
 |:------:|:------:|:------:|:------:|:-----------------:|
 |    R   |    O   |    C   |    K   |                   |
@@ -18,11 +19,26 @@ number of characters in the string, i.e. 4. See example below for more:
 |    0   |    0   |    1   |    1   | 0 + 0 + 1 + 1 = 2 |
 
 
-
 * Additionally, the user will understand how Java date and time formats work.
-
 
 
 ## Problem-Solving approach
 
+* In order to compile the tasked program, I used a systematic approach to 
+tacle the issue.
+	+ First, I used the UML diagram provided to understand the methods within both `.java` files.
+	+ Next, I incrementally tested the program in another `.java` file to ensure that the output
+	 of each method matched the project decription's example output.
+	+ As I tested these methods in the "scratch" file, I began putting them into the `DateTimeOne.java`
+	 and the `HammingDist.java` files. This workflow allowed for minimal errors, and if there were errors, 
+	 then I was able to quickly recover.
+	+ After completing all methods, I then tested the `Driver.java` class to ensure that the file output 
+	the correct information.
+
+
 ## Description of Methods and Variables
+
+### Methods
+
+
+### Variables
