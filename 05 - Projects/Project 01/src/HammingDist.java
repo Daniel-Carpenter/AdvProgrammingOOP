@@ -88,7 +88,7 @@ public class HammingDist
 				ArrayList<String> meso = this.readSTIDs("Mesonet.txt");
 			
 			// Loop through STID list
-				for (int STID_ELEMENT = 0; STID_ELEMENT < meso.size() - 1; ++STID_ELEMENT)
+				for (int STID_ELEMENT = 0; STID_ELEMENT < meso.size(); ++STID_ELEMENT)
 				{
 					int count = 0;
 					
@@ -117,7 +117,7 @@ public class HammingDist
 			
 			int count = 0;
 			
-			for (int ROWS = 0; ROWS < hammList.size() - 1; ++ROWS)
+			for (int ROWS = 0; ROWS < hammList.size(); ++ROWS)
 			{
 				if (hammInput == hammList.get(ROWS))
 				{
