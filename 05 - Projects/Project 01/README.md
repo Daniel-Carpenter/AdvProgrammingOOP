@@ -9,13 +9,18 @@ it calculates the "number of positions at which the corresponding symbols
 are different." For example, if the two Strings are contain the same characters
 in the same sequence, then the Hamming Distance will be 0. Alternatively, if 
 the characters do not match at in sequence, the hamming distance will equal the
-number of characters in the string, i.e. 4.
+number of characters in the string, i.e. 4. See example below for more:
+
+| char 1 | char 2 | char 3 | char 4 |  Hamming Distance |
+|:------:|:------:|:------:|:------:|:-----------------:|
+|    R   |    O   |    C   |    K   |                   |
+|    R   |    O   |    F   |    L   |                   |
+|    0   |    0   |    1   |    1   | 0 + 0 + 1 + 1 = 2 |
+
+
 
 * Additionally, the user will understand how Java date and time formats work.
 
-|char 1|char 2|char 3|char 4|
-|-|-|-|
-|G|O|N|E|
 
 
 ## Problem-Solving approach
