@@ -13,9 +13,14 @@ number of characters in the string, i.e. 4.
 
 * Additionally, the user will understand how Java date and time formats work.
 
-|char 1 |char 2| char 3 | char 4|
-|-------------------------------|
-|G		|O	   |N		|E		|	
+|char 1|char 2|char 3|char 4|
+|---------------------------|
+|G|O|N|E|
+
+
+|Topic|
+|--------------------------------------------------------------|
+|What is data science / big data / why is it important? ([Slides](https://github.com/tyleransom/DScourseS20/blob/master/CourseIntro/WhatIsDataScience.pdf))|
 ## Problem-Solving approach
 
 ## Description of Methods and Variables
