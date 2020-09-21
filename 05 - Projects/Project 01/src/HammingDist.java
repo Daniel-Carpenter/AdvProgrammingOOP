@@ -19,7 +19,7 @@ public class HammingDist
 			this.STID_1 = STID_1;
 			this.STID_2 = STID_2;
 		}
-		
+		 
 	// Calculations -----------------------------------------------------------------------
 		
 		public int calcHammDistOfSTID(String STID)
