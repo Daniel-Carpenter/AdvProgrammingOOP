@@ -2,6 +2,18 @@
 
 ## Understanding of the Problem 
 
+* Within this Java Project, the program allows the user to calculate the 
+`Hamming Distance` of two given stations. According to the project description,
+the Hamming Distance is the "distance between two strings of equal length 
+then calculates the "number of positions at which the corresponding symbols 
+are different." For example, if the two Strings are contain the same characters
+in the same sequence, then the Hamming Distance will be 0. Alternatively, if 
+the characters do not match at in sequence, the hamming distance will equal the
+number of characters in the string, i.e. 4.
+
+* Additionally, the user will understand how Java date and time formats work.
+
+
 ## Problem-Solving approach
 
 ## Description of Methods and Variables
