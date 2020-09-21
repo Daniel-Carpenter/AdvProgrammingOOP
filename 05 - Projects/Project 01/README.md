@@ -25,7 +25,7 @@ number of characters in the string, i.e. 4. See example below for more:
 ## Problem-Solving approach
 
 * In order to compile the tasked program, I used a systematic approach to 
-tacle the issue.
+tackle the issue.
 	+ First, I used the UML diagram provided to understand the methods within both `.java` files.
 	+ Next, I incrementally tested the program in another `.java` file to ensure that the output
 	 of each method matched the project decription's example output.
@@ -40,5 +40,40 @@ tacle the issue.
 
 ### Methods
 
+* 
+
 
 ### Variables
+
+* Below gives a description of the variables that were ***NOT*** included in the template files provided by the instructor.
+
+#### DateTimeOne.java
+
+1. `getValueOfSecond()` - Formats the (local) current date-time as second in an `int` variable.
+
+2. `sleepForThreeSec()` - "Interupts" the program for 3-seconds. No iterations take place during this pause.
+
+
+***
+
+#### HammingDist.java
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
