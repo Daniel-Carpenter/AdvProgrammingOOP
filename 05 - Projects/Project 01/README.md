@@ -38,16 +38,9 @@ tackle the issue.
 
 ## Description of Methods and Variables
 
-### Methods
-
-* 
-
-
-### Variables
-
 * Below gives a description of the variables that were ***NOT*** included in the template files provided by the instructor.
 
-#### DateTimeOne.java
+### DateTimeOne.java
 
 1. `getValueOfSecond()` - Formats the (local) current date-time as second in an `int` variable.
 
@@ -56,7 +49,7 @@ tackle the issue.
 
 ***
 
-#### HammingDist.java
+### HammingDist.java
 
 
 
