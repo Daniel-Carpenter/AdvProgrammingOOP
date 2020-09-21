@@ -27,7 +27,7 @@ number of characters in the string, i.e. 4. See example below for more:
 In order to compile the tasked program, I used a systematic approach to 
 tackle the issue.
 
-1. First, I used the UML diagram provided to understand the methods within both `.java` files.
+1. First, I created a UML diagram to understand the methods within both `.java` files.
 
 2. Next, I incrementally tested the program in another `.java` file to ensure that the output
    of each method matched the project decription's example output.
@@ -49,7 +49,7 @@ tackle the issue.
 
 * `getValueOfSecond(): int` - Returns a formatted `int`that includes the the second value of the (local) current date-time.
 
-* `sleepForThreeSec()`: void - "Interupts" the program for 3-seconds. No iterations take place during this pause.
+* `sleepForThreeSec(): void` - "Interupts" the program for 3-seconds. No iterations take place during this pause.
 
 
 ***
