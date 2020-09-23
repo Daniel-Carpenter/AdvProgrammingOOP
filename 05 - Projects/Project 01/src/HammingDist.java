@@ -22,17 +22,19 @@ public class HammingDist
 		 
 	// Calculations -----------------------------------------------------------------------
 		
-		public int calcHammDistOfSTID(String STID)
+		public int calcHammDistOfSTID(String STID_01, String STID_02)
 		{
-			int STID_Count = 0;	
-			
-			for (int LETTER = 0; LETTER < 4; ++LETTER)
-			{
-				if (this.NRMN.charAt(LETTER) != STID.charAt(LETTER))
+			// Initialize Count to 0
+				int STID_Count = 0;	
+				
+			// Count characters that equal each other from two parameter STIDS
+				for (int LETTER = 0; LETTER < 4; ++LETTER)
 				{
-					++STID_Count;
+					if (STID_01.charAt(LETTER) != STID_02.charAt(LETTER))
+					{
+						++STID_Count;
+					}
 				}
-			}
 			
 			return STID_Count;
 		}
@@ -79,18 +81,18 @@ public class HammingDist
 			return STID_List_Full;
 		}
 		
-		public ArrayList<Integer> calcHammDistFromFile() throws IOException
+		public ArrayList<Integer> calcHammDistFromFile(String STID) throws IOException
 		{
 			// Create Output Array
 				ArrayList<Integer> HAMM_COUNT = new ArrayList<Integer>();
 			
-			// Read in Mesonet .txt file
+			// Read in Mesonet.txt file
 				ArrayList<String> meso = this.readSTIDs("Mesonet.txt");
 			
-			// Loop through STID list
+			// Loop through STID list and Calculate Hamming Distances between Mesonet STID[i] and Parameter STID
 				for (int STID_ELEMENT = 0; STID_ELEMENT < meso.size(); ++STID_ELEMENT)
 				{
-						HAMM_COUNT.add(calcHammDistOfSTID(meso.get(STID_ELEMENT)));
+						HAMM_COUNT.add(calcHammDistOfSTID(STID, meso.get(STID_ELEMENT)));
 				}
 			
 			// Return ArrayList
@@ -99,29 +101,32 @@ public class HammingDist
 		
 		public int calcSameHammDists(String STID) throws IOException
 		{
-			int hammInput = this.calcHammDistOfSTID(STID);
-			ArrayList<Integer> hammList = this.calcHammDistFromFile();
+			// Get Hamming Distance of parameter STID and NRMN
+				int hammInput = this.calcHammDistOfSTID(this.NRMN, STID);
 			
-			int count = 0;
+			// Create ArrayList with Hamming Distances from the STID and all STID's in file
+				ArrayList<Integer> hammList = this.calcHammDistFromFile(STID);
 			
-			for (int ROWS = 0; ROWS < hammList.size(); ++ROWS)
-			{
-				if (hammInput == hammList.get(ROWS))
+			// Count Number of Same Hamming Distances as NRMN and Parameter STID
+				int count = 0;
+				
+				for (int ROWS = 0; ROWS < hammList.size(); ++ROWS)
 				{
-					++count;
+					if (hammInput == hammList.get(ROWS))
+					{
+						++count;
+					}
 				}
-			}
 			
-			return count - 1; // -1 because do not double count first
+			return count;
 		}
 		
 		public String toString()
 		{
 			String output = "The Hamming distance between Norman and " + 
-							this.getSTID_1() + " is " + this.calcHammDistOfSTID(this.getSTID_1()) + "; " 
+							this.getSTID_1() + " is " + this.calcHammDistOfSTID(this.getSTID_1(), this.NRMN) + "; " 
 							+ "between Norman and " + this.getSTID_2() 
-							+ " is " + this.calcHammDistOfSTID(this.getSTID_2())+ ".";
-					
+							+ " is " + this.calcHammDistOfSTID(this.getSTID_2(), this.NRMN) + ".";		
 			
 			try 
 			{
@@ -129,12 +134,12 @@ public class HammingDist
 						
 						// STID_1
 							+ "\n" + "For " + this.getSTID_1() + ": Number of stations with Hamming Distance " 
-							+ this.calcHammDistOfSTID(this.getSTID_1()) + ": " 
+							+ this.calcHammDistOfSTID(this.getSTID_1(), this.NRMN) + ": " 
 							+ this.calcSameHammDists(this.getSTID_1()) + "."
 						
 						// STID_2
 							+ "\n" + "For " + this.getSTID_2() + ": Number of stations with Hamming Distance " 
-							+ this.calcHammDistOfSTID(this.getSTID_2()) + ": " 
+							+ this.calcHammDistOfSTID(this.getSTID_2(), this.NRMN) + ": " 
 							+ this.calcSameHammDists(this.getSTID_2()) + ".";
 			} 
 			catch (IOException e) 
@@ -157,6 +162,5 @@ public class HammingDist
 		{
 			return STID_2;
 		}
-		
-		
+
 }

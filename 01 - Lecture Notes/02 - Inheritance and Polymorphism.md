@@ -21,7 +21,3 @@
 ### Overloading vs. Overriding
 * `Overload` = same name but different *paramter list*
 * `Override` = method that has the same name, parameters, and return type as a base class's method
-
-
-The remaining much larger portion of outgoing terrestrial radiation (about 90%) is absorbed by greenhouse gases in the Earth's atmosphere.  
-Greenhouse gases, which have the ability to absorb and and emit terrestrial radiation within the Earth's atmosphere
