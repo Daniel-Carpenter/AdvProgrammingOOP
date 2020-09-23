@@ -4,7 +4,7 @@
 
 * Within this Java Project, the program allows the user to calculate the 
 `Hamming Distance` of two given stations. According to the project description,
-the Hamming Distance is the "distance between two strings of equal length;
+the Hamming Distance is the "distance between two strings of equal length;"
 it calculates the "number of positions at which the corresponding symbols 
 are different." For example, if the two Strings are contain the same characters
 in the same sequence, then the Hamming Distance will be 0. Alternatively, if 
