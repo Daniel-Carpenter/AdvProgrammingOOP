@@ -19,6 +19,8 @@ number of characters in the string, i.e. 4. See example below for more:
 |    0   |    0   |    1   |    1   | 0 + 0 + 1 + 1 = 2 |
 
 
+*Please view [this resource](https://en.wikipedia.org/wiki/Hamming_distance) from Wikipedia if you still experience abiguity in understanding.*
+
 * Additionally, the user will understand how Java date and time formats work.
 
 
@@ -56,18 +58,19 @@ tackle the issue.
 
 ### HammingDist.java
 
-* `calcHammDistOfSTID(String STID): int`
-	+ Method calls any STID and calculates the Hamming Distance between its own STID and `"NRMN"`'s STID.
+* `calcHammDistOfSTID(String STID_01, String STID_02): int`
+	+ Method calculates the Hamming Distance between the parameters `STID_01` and `STID_01`.
 
 * `readSTIDs(String filename): ArrayList<String>`
 	+ Reads in any `.txt` file in the format like `Mesonet.txt` and returns an `ArrayList<String>` 
 	  containing only STID's within the `ArrayList`'s elements.
 
-* `calcHammDistFromFile(): ArrayList<Integer>`
+* `calcHammDistFromFile(String STID): ArrayList<Integer>`
 	+ Calls `readSTIDs(String filename)` to read in `Mesonet.txt`. 
-	+ The method then calls `calcHammDistOfSTID` on each `ArrayList` element to 
-	  calculate its Hamming Ditance from `"NRMN"`.
-	+ The method returns an `ArrayList<Integer>` with the file's STIDs' Hamming Distance.
+	+ The method then calls `calcHammDistOfSTID(String STID_01, String STID_02)` on each `ArrayList<String>`'s elements to 
+	  calculate the element's Hamming Distance between the parameters `STID`.
+	+ The method returns an `ArrayList<Integer>`, which includes integers resembling the Hamming Distance 
+	  between the above `ArrayList<String>` and the paramter `STID`.
 
 * `calcSameHammDists(String STID): int`
 	+ Method counts the number of same Hamming Distance's that another STID has with `"NRMN"`.
