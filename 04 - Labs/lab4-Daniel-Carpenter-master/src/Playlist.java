@@ -8,8 +8,6 @@ import java.util.HashSet;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import com.sun.tools.classfile.Opcode.Set;
-
 public class Playlist 
 {
 	private ArrayList<Song> songs;

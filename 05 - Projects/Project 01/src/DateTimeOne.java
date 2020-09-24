@@ -1,8 +1,6 @@
-import java.sql.Date;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.concurrent.TimeUnit;
-import javax.print.DocFlavor.STRING;
 
 public class DateTimeOne
 {
