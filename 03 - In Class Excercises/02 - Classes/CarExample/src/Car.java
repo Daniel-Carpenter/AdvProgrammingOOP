@@ -1,18 +1,14 @@
 
 public class Car 
 {	
-	// non static, instance vars
-	// incapsulation 
-		// 1. make private vars
-		// 2. make getters setts
 	private String 	make;
-	private String 	color;
+	private String 	model;
 	private int		year;
 	
-	public Car(String make, String color, int year)
+	public Car(String make, String model, int year)
 	{
 		this.make	= make;
-		this.color	= color;
+		this.model	= model;
 		this.year	= year;
 	}
 
@@ -21,13 +17,18 @@ public class Car
 		return make;
 	}
 
-	public String getColor() 
+	public String getModel() 
 	{
-		return color;
+		return model;
 	}
 
 	public int getYear() 
 	{
 		return year;
+	}
+	
+	public String toString()
+	{
+		return this.getMake() + " " + this.getModel() + "\n";
 	}
 }
