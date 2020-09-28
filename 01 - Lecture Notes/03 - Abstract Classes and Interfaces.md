@@ -1,4 +1,4 @@
-## Abstract Classes
+## Abstract Classes and Interfaces
 
 ### Previously. . .
 * `Classes` - object with data in it

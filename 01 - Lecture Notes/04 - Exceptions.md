@@ -1,36 +1,49 @@
-## Abstract Classes
+## Exceptions
 
-### Previously. . .
-* `Classes` - object with data in it
+### Basics
+* `Exceptions` handle errors
 
-* `Inheritance` -  extends a class
+### `try`, `throw`, and `catch` exceptions
+
+```java
+try {
+   ...
+   // If error detected
+      throw objectOfExceptionType;
+   ...
+}
+catch (exceptionType excptObj) {
+   // Handle exception, e.g., print message
+}
+finally {
+   // Clean up resources, e.g., close file
+}
+```
+
+* `try` - like IFERROR(`try` , `catch`)
+* `throw`
+	+ If reached `throw` in `try` block, then go to end of try blocl
+	+ Similar to break in `for loops`
 
 ***
 
-### Regulating code with `Absract classes` and `Interfaces`
+### Checked vs. Unchecked Exceptions
+* **Checked Exception**: exception that a programmer should be able to anticipate and appropriately handle
+* **Unchecked Exceptions**: errors from logic that are not anticipated
 
-* `Abstract class` - regulates subclasses
-	+ `Triangle` subclass must include `computeArea()`, etc.
-	+ Cannot be instantiated as an object, but is the superclass for a subclass and specifies how the subclass must be implemented. 
-	+ Abstract class is denoted by the keyword abstract in front of the class definition.
+#### Common Checked Exceptions:
 
-* `Concrete class` is a class that is not abstract, and hence can be instantiated
+| Unchecked exception | Notes |
+|:-:|:-:|
+| NullPointerException | Indicates a null reference. |
+| IndexOutOfBoundsException | Indicates that an index (e.g., an index for an array) is outside the appropriate range. |
+| ArithmeticException | Indicates the occurrence of an exceptional arithmetic condition (e.g., integer division by zero). |
+| IOError | Indicates the failure of an I/O operation. |
+| ClassCastException | Indicates an invalid attempt to cast an object to type of which the object is not an instance (e.g., casting a Double to a String). |
+| IllegalArgumentException | Thrown by a method to indicate an illegal or inappropriate argument. |
+
 
 ***
 
-* `Interface`
-	+ Another regulation mexhanism
-	+ Does not need the abstract keyword in front of the method signature.
-	+ Example:
-	```java
-	import java.awt.Graphics2D;
-	
-	public interface Drawable 
-	{
-		public void draw(Graphics2D graphicsObject);
-	}
-	```
-	+ **Reguirements of `interfaces`**:
-		+ List the interface name after the keyword implements
-		+ Override and implement the interface's abstract methods
-	
+### Handle Multiple Errors
+`catch(Throwable thrwObj)`: catch-all handler for any error or exception derived from the Throwable class;
