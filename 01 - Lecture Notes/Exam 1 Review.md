@@ -7,7 +7,8 @@
 |Term               | Definition                            | Example                       |
 |-------------------|---------------------------------------|-------------------------------|
 |**Overloading**    | Overloading is having two class constructors with the same name, but different arguments | - `public class Class (int argument)` *overloads* `public class Class()`|
-|Override           | method that has the same name, parameters, and return type as a base class's method ||
+|**Override**       | method that has the same name, parameters, and return type as a base class's method ||
+|**Protected**      | Access in the same package, but not anyone else||
 |**Reference**      | `Variable` that references an object      | `ArrayList<Class> objectArray = new ArrayList<Class>` |
 |**Wrapper Class**  | `Class` *`reference`* that is a built into java. | E.g. Character, Integer, Double, Bolean, Long |
 |**Packages**       | Grouping o classes, interfaces, types, etc. | `java.lang`, `.util`, `.io` `...` |
@@ -26,9 +27,7 @@
 
 ```java
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -59,6 +58,11 @@ import java.util.ArrayList;
 ### Writing Files
 
 ```java
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+
 private Object whatever;
 
 public void writeFile(String filename) throws IOException
