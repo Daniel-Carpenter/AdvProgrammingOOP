@@ -7,6 +7,65 @@
 |Term               | Definition                            | Example                       |
 |-------------------|---------------------------------------|-------------------------------|
 |**Overloading**    | Overloading is having two class constructors with the same name, but different arguments | - `public class Class (int argument)` *overloads* `public class Class()`|
+|Override           | method that has the same name, parameters, and return type as a base class's method ||
 |**Reference**      | `Variable` that references an object      | `ArrayList<Class> objectArray = new ArrayList<Class>` |
 |**Wrapper Class**  | `Class` *`reference`* that is a built into java. | E.g. Character, Integer, Double, Bolean, Long |
+|**Packages**       | Grouping o classes, interfaces, types, etc. | `java.lang`, `.util`, `.io` `...` |
+
+
+### Packages
+|Package Name       |When to throw/include                  |
+|-------------------|---------------------------------------|
 |||
+
+***
+
+## I/O Streams
+
+### Reading Files 
+
+```java
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+
+
+	public void readFile(String filename) throws IOException
+	{
+        // Create Storage List
+            ArrayList<String> container new ArrayList<String>();
+
+		// Create reader
+			BufferedReader reader = new BufferedReader(new FileReader(filename));
+		
+		// Read first line of .txt file
+			String line = reader.readLine();
+		
+		// Read lines until meets last line of .txt file (null)
+			while (line != null)
+			{
+				container.add(line);
+				line = reader.readLine();
+			}
+
+        // Close Reader
+		    reader.close();
+	}
+```
+
+### Writing Files
+
+```java
+private Object whatever;
+
+public void writeFile(String filename) throws IOException
+{
+    BufferedWriter writer = new BufferedWriter(new FileWriter(filename));
+
+    writer.write(this.toString());
+    writer.close();
+}
+```
