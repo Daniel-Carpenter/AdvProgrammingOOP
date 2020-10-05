@@ -1,3 +1,3 @@
 ### Git Bash
 
-* Can drag and drop files from Eclipse to get path
+* Can drag and drop files from Eclipse to get path
