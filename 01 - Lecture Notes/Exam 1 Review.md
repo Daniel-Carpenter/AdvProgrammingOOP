@@ -32,27 +32,27 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 
-	public void readFile(String filename) throws IOException
-	{
-        // Create Storage List
-            ArrayList<String> container new ArrayList<String>();
+public void readFile(String filename) throws IOException
+{
+    // Create Storage List
+        ArrayList<String> container new ArrayList<String>();
 
-		// Create reader
-			BufferedReader reader = new BufferedReader(new FileReader(filename));
-		
-		// Read first line of .txt file
-			String line = reader.readLine();
-		
-		// Read lines until meets last line of .txt file (null)
-			while (line != null)
-			{
-				container.add(line);
-				line = reader.readLine();
-			}
+    // Create reader
+        BufferedReader reader = new BufferedReader(new FileReader(filename));
 
-        // Close Reader
-		    reader.close();
-	}
+    // Read first line of .txt file
+        String line = reader.readLine();
+
+    // Read lines until meets last line of .txt file (null)
+        while (line != null)
+        {
+            container.add(line);
+            line = reader.readLine();
+        }
+
+    // Close Reader
+        reader.close();
+}
 ```
 
 ### Writing Files
