@@ -73,3 +73,25 @@ public void writeFile(String filename) throws IOException
     writer.close();
 }
 ```
+
+
+### Exceptions
+
+* `Exceptions` handle errors
+
+### `try`, `throw`, and `catch` exceptions
+
+```java
+try {
+   ...
+   // If error detected
+      throw objectOfExceptionType;
+   ...
+}
+catch (exceptionType excptObj) {
+   // Handle exception, e.g., print message
+}
+finally {
+   // Clean up resources, e.g., close file
+}
+```
