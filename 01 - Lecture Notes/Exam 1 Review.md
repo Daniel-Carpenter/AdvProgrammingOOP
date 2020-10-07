@@ -96,6 +96,13 @@ finally {
 }
 ```
 
+***
+## Links 
 
 ### Formatting
 * [Link to formatting](https://learn.zybooks.com/zybook/OUCS2334JabrzemskiFall2020/chapter/9/section/2?content_resource_id=42397796)
+* [DecimalFormat Class](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/DecimalFormat.html)
+
+### Parsing
+* [Parse int from input](https://github.com/Daniel-Carpenter/CS-2334/blob/master/02%20-%20Homework/Zyante%207/src/StringInputStream.java)
+* [Join input together and output](https://github.com/Daniel-Carpenter/CS-2334/blob/master/02%20-%20Homework/Zyante%207/src/StringStreamOutput.javax`)
