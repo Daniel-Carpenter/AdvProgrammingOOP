@@ -108,3 +108,43 @@ values();                   // returns all values
 
 ## 15.4 Set: `HashSet`
 
+* Used to tell user if there if `element` exists in list when adding/removing
+* Commonly returns `true` or `false` if not in the `Set`
+
+### Common `HashSet` Methods
+
+* `boolean`: add(`element`)     // adds and returns true if in the list
+* `boolean`: remove(`element`)  // removes and returns true if in list
+* `boolean`: contains(`element`) // true if in list, false if not 
+
+## 15.5 `Queue` interface
+
+* List function that throws exception if attemtped removal but bothinf there
+
+```java
+Queue<String> waitList = new LinkedList<String>();
+
+waitList.add("Neumann party of 1");
+waitList.add("Amdahl party of 2");
+waitList.add("Flynn party of 4");
+
+System.out.println("Serving: " + waitList.remove());
+System.out.println("Serving: " + waitList.remove());
+System.out.println("Serving: " + waitList.remove());
+```
+
+```txt
+Serving: Neumann party of 1
+Serving: Amdahl party of 2
+Serving: Flynn party of 4
+```
+
+## 15.6 Deque interface
+
+### Declaration
+
+```java
+Deque<Type> deque = new LinkedList<Type>();
+```
+
+* Has common methods like `getFirst()` and `getLast()`
