@@ -35,7 +35,7 @@ import java.util.ArrayList;
 public void readFile(String filename) throws IOException
 {
     // Create Storage List
-        ArrayList<String> container new ArrayList<String>();
+        ArrayList<String> container = new ArrayList<String>();
 
     // Create reader
         BufferedReader reader = new BufferedReader(new FileReader(filename));
