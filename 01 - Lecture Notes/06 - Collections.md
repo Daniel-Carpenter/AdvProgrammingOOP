@@ -1,5 +1,23 @@
 # Collections (Ch. 15)
 
+## Intro
+
+### Data Structures vs. Abstract Classes
+
+* `Data Structures` are a way to organize data, like an `Array` or `ArrayList`
+
+### Defining a `Collection`
+
+* Pile of unsorted objects
+* Common provisions from `Collection`s
+    + `add()`
+    + `remove()`
+    + `contains()`
+
+### Collections Interface
+
+* Know these: Deque, Queue, List Set
+
 ## 15.1 Enhanced For Loop using ArrayList
 
 ### Generally
