@@ -2,13 +2,13 @@
 
 ## Coverage
 
-|Assn|Topic|
-|-|-|
-|Lab 6|Inheritance|
-|Lab 7|Abstract and Interfaces|
-|Lab 8|Collections|
-|Project 2|Abstraction|
-|Project 3|HashMap|
+|Assn|Topic|Status|
+|-|-|-|
+|Lab 6|Inheritance|Good|
+|Lab 7|Abstract and Interfaces|Check interfaces|
+|Lab 8|Collections|Review Lecture|
+|Project 2|Abstraction|Good|
+|Project 3|HashMap|Good|
 
 ***
 

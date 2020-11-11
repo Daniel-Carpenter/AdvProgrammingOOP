@@ -1,4 +1,4 @@
-# Department Summary for OPA
+# Summary for Super Mario Bros
 
 ## Employees and Employment Attributes
 
@@ -6,33 +6,33 @@
 
 * ID: 4
 * Status: Full Time
-* Base Salary: 120,000
-* Team: Site Lead
+* Base Salary: 45,000
+* Team: Protagonist
 
 ### `Wario`
 
 * ID: 5
-* Status: Full Time
-* Base Salary: 110,000
-* Team: Site Lead
+* Status: Part Time
+* Base Salary: 10,000
+* Team: Petty Villian
 
 ### `Toad`
 
 * ID: 2
 * Status: Full Time
-* Base Salary: 90,000
-* Team: Data Scientist
+* Base Salary: 25,000
+* Team: Silly Companion
 
 ### `Bowser`
 
 * ID: 1
 * Status: Full Time
-* Base Salary: 150,000
-* Team: Senior Manager
+* Base Salary: 2,000,000
+* Team: Main Boss
 
 ### `Mario`
 
 * ID: 3
 * Status: Full Time
-* Base Salary: 130,000
-* Team: Data Scientist
+* Base Salary: 50,000
+* Team: Protagonist

@@ -4,17 +4,17 @@ public class TestClass {
 
 	public static void main(String[] args) throws IOException {
 
-		Department OPA = new Department("OPA");
+		Department bros = new Department("Super Mario Bros");
 
-		OPA.addEmployee(new Employee("Bowser", 150000, EmployeeStatus.FT), DeptTeam.SENIOR_MANAGER);
-		OPA.addEmployee(new Employee("Toad", 	90000, EmployeeStatus.FT),  DeptTeam.DATA_SCIENTIST);
-		OPA.addEmployee(new Employee("Mario",   130000, EmployeeStatus.FT), DeptTeam.DATA_SCIENTIST);
-		OPA.addEmployee(new Employee("Luigi",   120000, EmployeeStatus.FT), DeptTeam.SITE_LEAD);
-		OPA.addEmployee(new Employee("Wario",   110000, EmployeeStatus.FT), DeptTeam.SITE_LEAD);
+		bros.addEmployee(new Employee("Bowser", 2000000, EmployeeStatus.FT), DeptTeam.MAIN_BOSS);
+		bros.addEmployee(new Employee("Toad", 	25000, EmployeeStatus.FT),  DeptTeam.SILLY_COMPANION);
+		bros.addEmployee(new Employee("Mario",  50000, EmployeeStatus.FT), DeptTeam.PROTAGONIST);
+		bros.addEmployee(new Employee("Luigi",  45000, EmployeeStatus.FT), DeptTeam.PROTAGONIST);
+		bros.addEmployee(new Employee("Wario",  10000, EmployeeStatus.PT), DeptTeam.PETTY_VILLIAN);
 		
-		System.out.println(OPA);
+		System.out.println(bros);
 		
-		DeptSummaryMd.writeFile("README", OPA);
+		DeptSummaryMd.writeFile("README", bros);
 
 	}
 }

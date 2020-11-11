@@ -1,9 +1,10 @@
 
 public enum DeptTeam
 {
-	SITE_LEAD("Site Lead"),
-	DATA_SCIENTIST("Data Scientist"),
-	SENIOR_MANAGER("Senior Manager");
+	PETTY_VILLIAN("Petty Villian"),
+	PROTAGONIST("Protagonist"),
+	MAIN_BOSS("Main Boss"),
+	SILLY_COMPANION("Silly Companion");
 	
 	
 	private String symbol;

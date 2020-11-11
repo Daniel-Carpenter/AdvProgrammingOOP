@@ -11,7 +11,7 @@ public class DeptSummaryMd {
 		String filename = filenameWithoutExtension + extension;
 		
 		BufferedWriter writer = new BufferedWriter(new FileWriter(filename));
-		writer.write("# Department Summary for " + dept.getDeptName() + "\n\n"
+		writer.write("# Summary for " + dept.getDeptName() + "\n\n"
 					+ "## Employees and Employment Attributes");
 		writer.write(dept.toString());
 		writer.close();
