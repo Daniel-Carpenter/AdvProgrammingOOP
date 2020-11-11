@@ -1,34 +1,39 @@
 import java.util.HashMap;
-import java.util.LinkedList;
 
 /**
  * @author Daniel Carpenter
  */
 public class Department extends DepartmentAbstract {
 
-	private static HashMap<Employee, Integer> empList = new HashMap<Employee, Integer>();
-	private static int numEmpsInDept = 0;
+	private static HashMap<Employee, DeptTeam> empList = new HashMap<Employee, DeptTeam>();
 
-	public Department(LinkedList<Employee> empList) {
-		for (Employee emp : empList) {
-			addEmployee(emp);
-		}
+	public Department() {
+		// this only constructs
 	}
 
 	@Override
-	public void addEmployee(Employee emp) {
-		empList.put(emp, ++numEmpsInDept);
-		System.out.println("Successful addition:\n" + emp);
+	public void addEmployee(Employee emp, DeptTeam deptTeam) {
+		empList.put(emp, deptTeam);
+		System.out.println("Successful addition, ID = " + emp.getEmpID());
 	}
 
 	@Override
-	public HashMap<Employee, Integer> getDeptList() {
+	public HashMap<Employee, DeptTeam> getDeptList() {
 		return empList;
 	}
 
 	@Override
 	public String toString() {
-		return empList.toString();
+		String strOut = "";
+		
+		Object[] emps  = this.getDeptList().keySet().toArray();
+		Object[] teams = this.getDeptList().values().toArray();
+		
+		for (int i = 0; i < emps.length; ++i) {
+			strOut += "\n---------------------\n"
+				   + emps[i]
+				   + "Team: " + teams[i].toString();
+		}
+		return strOut;
 	}
-
 }

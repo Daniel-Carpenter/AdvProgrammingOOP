@@ -1,15 +1,18 @@
+import java.text.NumberFormat;
 
 /**
  * @author Daniel Carpenter
  */
 public class Employee extends EmployeeAbstract {
 
+	private String name;
 	private static int numEmps = 1;
 	private final int empID = numEmps;
 	private int baseSalary;
 	private EmployeeStatus status;
 
-	public Employee(int baseSalary, EmployeeStatus status) {
+	public Employee(String name, int baseSalary, EmployeeStatus status) {
+		setName(name);
 		setNumEmps();
 		setBaseSalary(baseSalary);
 		setStatus(status);
@@ -31,12 +34,12 @@ public class Employee extends EmployeeAbstract {
 	}
 
 	public String toString() {
-		return "ID: " + getEmpID() + "\n" + "Status: " + getStatus() + "\n" + "Base Salary: " + getBaseSalary() + "\n";
-	}
-
-	public int getNumEmps() {
-		return numEmps;
-	}
+		String salary = NumberFormat.getIntegerInstance().format(getBaseSalary());
+		
+		return "Name: " 	   + getName() 		+ "\n" 
+			 + "ID: " 		   + getEmpID() 	+ "\n" 
+			 + "Status: " 	   + getStatus() 	+ "\n" 
+			 + "Base Salary: " + salary 		+ "\n";	}
 
 	public int getEmpID() {
 		return empID;
@@ -48,6 +51,14 @@ public class Employee extends EmployeeAbstract {
 
 	public EmployeeStatus getStatus() {
 		return status;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 }
