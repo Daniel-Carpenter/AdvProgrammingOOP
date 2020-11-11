@@ -6,9 +6,10 @@ import java.util.HashMap;
 public class Department extends DepartmentAbstract {
 
 	private static HashMap<Employee, DeptTeam> empList = new HashMap<Employee, DeptTeam>();
+	private String deptName;
 
-	public Department() {
-		// this only constructs
+	public Department(String deptName) {
+		this.deptName = deptName;
 	}
 
 	@Override
@@ -22,6 +23,10 @@ public class Department extends DepartmentAbstract {
 		return empList;
 	}
 
+	public String getDeptName() {
+		return deptName;
+	}
+
 	@Override
 	public String toString() {
 		String strOut = "";
@@ -30,9 +35,9 @@ public class Department extends DepartmentAbstract {
 		Object[] teams = this.getDeptList().values().toArray();
 		
 		for (int i = 0; i < emps.length; ++i) {
-			strOut += "\n---------------------\n"
+			strOut += "\n\n"
 				   + emps[i]
-				   + "Team: " + teams[i].toString();
+				   + "* Team: " + teams[i].toString();
 		}
 		return strOut;
 	}

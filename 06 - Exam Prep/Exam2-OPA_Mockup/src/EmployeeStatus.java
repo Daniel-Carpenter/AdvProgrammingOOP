@@ -6,10 +6,22 @@ public enum EmployeeStatus {
 	/**
 	 * Full Time
 	 */
-	FT,
+	FT("Full Time"),
 	
 	/**
 	 * Part Time 
 	 */
-	PT
+	PT("Part Time");
+	
+	
+	private String symbol;
+
+	private EmployeeStatus(String symbol)
+	{
+		this.symbol = symbol;
+	}
+	
+	public String toString() {
+		return symbol;
+	}
 }

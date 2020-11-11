@@ -9,7 +9,7 @@ public class Employee extends EmployeeAbstract {
 	private static int numEmps = 1;
 	private final int empID = numEmps;
 	private int baseSalary;
-	private EmployeeStatus status;
+	private String status;
 
 	public Employee(String name, int baseSalary, EmployeeStatus status) {
 		setName(name);
@@ -30,16 +30,16 @@ public class Employee extends EmployeeAbstract {
 
 	@Override
 	public void setStatus(EmployeeStatus status) {
-		this.status = status;
+		this.status = status.toString();
 	}
 
 	public String toString() {
 		String salary = NumberFormat.getIntegerInstance().format(getBaseSalary());
 		
-		return "Name: " 	   + getName() 		+ "\n" 
-			 + "ID: " 		   + getEmpID() 	+ "\n" 
-			 + "Status: " 	   + getStatus() 	+ "\n" 
-			 + "Base Salary: " + salary 		+ "\n";	}
+		return "### `" + getName() + "`\n\n" 
+			 + "* ID: "		 + getEmpID() 	+ "\n" 
+			 + "* Status: " 	 + getStatus() 	+ "\n" 
+			 + "* Base Salary: " + salary 		+ "\n";	}
 
 	public int getEmpID() {
 		return empID;
@@ -49,7 +49,7 @@ public class Employee extends EmployeeAbstract {
 		return baseSalary;
 	}
 
-	public EmployeeStatus getStatus() {
+	public String getStatus() {
 		return status;
 	}
 
