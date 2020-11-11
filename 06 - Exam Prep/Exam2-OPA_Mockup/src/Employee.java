@@ -14,7 +14,7 @@ public class Employee extends EmployeeAbstract {
 		setBaseSalary(baseSalary);
 		setStatus(status);
 	}
-	
+
 	@Override
 	public void setNumEmps() {
 		++numEmps;
@@ -29,17 +29,15 @@ public class Employee extends EmployeeAbstract {
 	public void setStatus(EmployeeStatus status) {
 		this.status = status;
 	}
-	
+
 	public String toString() {
-		return    "ID: " + getEmpID() + "\n" 
-				+ "Status: " + getStatus() + "\n"
-				+ "Base Salary: " + getBaseSalary() + "\n";
+		return "ID: " + getEmpID() + "\n" + "Status: " + getStatus() + "\n" + "Base Salary: " + getBaseSalary() + "\n";
 	}
 
 	public int getNumEmps() {
 		return numEmps;
 	}
-	
+
 	public int getEmpID() {
 		return empID;
 	}
