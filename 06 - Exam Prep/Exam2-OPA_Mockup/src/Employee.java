@@ -1,4 +1,7 @@
 
+/**
+ * @author Daniel Carpenter
+ */
 public class Employee extends EmployeeAbstract {
 
 	private static int empID = 0;
@@ -24,7 +27,12 @@ public class Employee extends EmployeeAbstract {
 	@Override
 	public void setStatus(EmployeeStatus status) {
 		this.status = status;
-
+	}
+	
+	public String toString() {
+		return    "ID: " + getEmpID() + "\n" 
+				+ "Status: " + getStatus() + "\n"
+				+ "Base Salary: " + getBaseSalary() + "\n";
 	}
 
 	public int getEmpID() {
