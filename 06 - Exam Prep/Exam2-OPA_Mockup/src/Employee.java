@@ -4,19 +4,20 @@
  */
 public class Employee extends EmployeeAbstract {
 
-	private static int empID = 0;
+	private static int numEmps = 1;
+	private final int empID = numEmps;
 	private int baseSalary;
 	private EmployeeStatus status;
 
 	public Employee(int baseSalary, EmployeeStatus status) {
-		setEmpID();
+		setNumEmps();
 		setBaseSalary(baseSalary);
 		setStatus(status);
 	}
-
+	
 	@Override
-	public void setEmpID() {
-		++empID;
+	public void setNumEmps() {
+		++numEmps;
 	}
 
 	@Override
@@ -35,6 +36,10 @@ public class Employee extends EmployeeAbstract {
 				+ "Base Salary: " + getBaseSalary() + "\n";
 	}
 
+	public int getNumEmps() {
+		return numEmps;
+	}
+	
 	public int getEmpID() {
 		return empID;
 	}
@@ -46,4 +51,5 @@ public class Employee extends EmployeeAbstract {
 	public EmployeeStatus getStatus() {
 		return status;
 	}
+
 }
