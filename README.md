@@ -1,2 +1,16 @@
-### Description of Repository
-* Used for Java II at University of Oklahoma
+##  Description of Repository
+> Advanced object/class oriented programming with abstractions in Java
+
+### [Click here to see all labs](https://github.com/Daniel-Carpenter/AdvProgrammingOOP/tree/master/04%20-%20Labs). Interesting ones below:
+* [Recursion Implementation](https://github.com/Daniel-Carpenter/AdvProgrammingOOP/tree/master/04%20-%20Labs/Lab%2009#lab-9-a-selection-of-recursive-algorithms), and [code](https://github.com/Daniel-Carpenter/AdvProgrammingOOP/tree/master/04%20-%20Labs/Lab%2009/src)
+* [Black Jack, Texas Holdem, and GoFish Game](https://github.com/Daniel-Carpenter/AdvProgrammingOOP/tree/master/04%20-%20Labs/Lab%2008#lab-8-collections-of-cards) - [code](https://github.com/Daniel-Carpenter/AdvProgrammingOOP/tree/master/04%20-%20Labs/Lab%2008/src), see the [game of *Nim* here too](https://github.com/Daniel-Carpenter/AdvProgrammingOOP/tree/master/04%20-%20Labs/Lab%2006#lab-6-an-exceptional-game-of-nim) - [code](https://github.com/Daniel-Carpenter/AdvProgrammingOOP/tree/master/04%20-%20Labs/Lab%2006/src)
+* [Abstraction with geometric objects](https://github.com/Daniel-Carpenter/AdvProgrammingOOP/tree/master/04%20-%20Labs/Lab%2007#lab-7-a-hierarchy-of-shapes), and [code](https://github.com/Daniel-Carpenter/AdvProgrammingOOP/tree/master/04%20-%20Labs/Lab%2007/src)
+* [Simple Spotify Structure](https://github.com/Daniel-Carpenter/AdvProgrammingOOP/tree/master/04%20-%20Labs/Lab%2004#lab-4-reading-and-writing-playlists), and [code](https://github.com/Daniel-Carpenter/AdvProgrammingOOP/tree/master/04%20-%20Labs/Lab%2004/src)
+
+### Click below to see **projects**:
+1. [Classes, methods, and other basics](https://github.com/Daniel-Carpenter/AdvProgrammingOOP/tree/master/05%20-%20Projects/Project%2001#readme): [Overview](https://github.com/Daniel-Carpenter/AdvProgrammingOOP/blob/master/05%20-%20Projects/Project%2001/Project%201%20Description.pdf), and [code](https://github.com/Daniel-Carpenter/AdvProgrammingOOP/tree/master/05%20-%20Projects/Project%2001/src)
+2. Abstractions: [Overview](https://github.com/Daniel-Carpenter/AdvProgrammingOOP/blob/master/05%20-%20Projects/Project%2002/Project%202%20Description.pdf),  [Output](https://github.com/Daniel-Carpenter/AdvProgrammingOOP/tree/master/05%20-%20Projects/Project%2001#readme), and [code](https://github.com/Daniel-Carpenter/AdvProgrammingOOP/tree/master/05%20-%20Projects/Project%2002/src)
+3. Creating HashMaps: [Overview](https://github.com/Daniel-Carpenter/AdvProgrammingOOP/blob/master/05%20-%20Projects/Project%2003/Project%203%20Description.pdf), and [Code](https://github.com/Daniel-Carpenter/AdvProgrammingOOP/tree/master/05%20-%20Projects/Project%2003/src)
+4. Graphics and JavaFX: [Overview](https://github.com/Daniel-Carpenter/AdvProgrammingOOP/blob/master/05%20-%20Projects/Project%2004/Project%204%20F20.pdf), [code](https://github.com/Daniel-Carpenter/AdvProgrammingOOP/tree/master/05%20-%20Projects/Project%2004/src), and [UML Diagram](https://github.com/Daniel-Carpenter/AdvProgrammingOOP/blob/master/05%20-%20Projects/Project%2004/uml/uml.pdf)
+5. [Discussion on Ethics and Programming](https://github.com/Daniel-Carpenter/AdvProgrammingOOP/blob/master/05%20-%20Projects/Project%2005/Project%205%20Essay%20-%20Daniel%20Carpenter.pdf)
+
